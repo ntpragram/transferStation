@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ch</groupId>
+  <artifactId>transferStaion</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>transferStaion</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.5.RELEASE</version>
+  </parent>
+
+  <dependencies>
+
+    <!--<dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+    &lt;!&ndash; swagger-ui &ndash;&gt;
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+-->
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.30</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-websocket</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>8.0.47</version>
+      <scope>provided</scope>
+    </dependency>
+
+
+    <!--   <dependency>
+         <groupId>org.springframework.kafka</groupId>
+         <artifactId>spring-kafka</artifactId>
+         <version>2.2.6.RELEASE</version>
+       </dependency>
+
+       <dependency>
+         <groupId>org.springframework.kafka</groupId>
+         <artifactId>spring-kafka-test</artifactId>
+         <scope>test</scope>
+       </dependency>
+       <dependency>
+         <groupId>org.projectlombok</groupId>
+         <artifactId>lombok</artifactId>
+       </dependency>-->
+
+    <dependency>
+      <groupId>com.microsoft.jdbc.sqlserver</groupId>
+      <artifactId>msbase</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/msbase.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.jdbc.sqlserver</groupId>
+      <artifactId>mssqlserver</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/mssqlserver.jar</systemPath>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>com.microsoft.jdbc.sqlserver</groupId>
+      <artifactId>msutil</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/msutil.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>rxtx-2.1.7</groupId>
+      <artifactId>rxtx</artifactId>
+      <version>2.1.7</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/rxtx-2.1.7.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>stax</groupId>
+      <artifactId>stax-1.2.0</artifactId>
+      <version>1.2.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/stax-1.2.0.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>stax-api</groupId>
+      <artifactId>stax-api-1.0.1</artifactId>
+      <version>1.0.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/stax-api-1.0.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>xpp3-1.1.3.3</groupId>
+      <artifactId>xpp3</artifactId>
+      <version>1.1.3.3</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/xpp3-1.1.3.3.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.5</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>onbon.bx05</groupId>
+      <artifactId>bx05.message-0.5.0-SNAPSHOT</artifactId>
+      <version>0.5.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/bx05.message-0.5.0-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>uia.comm-0.2.2</groupId>
+      <artifactId>comm</artifactId>
+      <version>0.2.2</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/uia.comm-0.2.2.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>uia.message-0.5.2</groupId>
+      <artifactId>message</artifactId>
+      <version>0.5.2</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/uia.message-0.5.2.jar</systemPath>
+    </dependency>
+
+
+
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+
+
+
+    <dependency>
+      <groupId>uia.utils-0.1.2</groupId>
+      <artifactId>utils</artifactId>
+      <version>0.1.2</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/uia.utils-0.1.2.jar</systemPath>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/de.alpharogroup/data-initialization -->
+    <dependency>
+      <groupId>de.alpharogroup</groupId>
+      <artifactId>data-initialization</artifactId>
+      <version>3.28.0</version>
+    </dependency>
+
+
+
+
+
+    <dependency>
+      <groupId>modbus-codec</groupId>
+      <artifactId>codec-1.1.1</artifactId>
+      <version>1.1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/modbus-codec-1.1.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>modbus-core</groupId>
+      <artifactId>core-1.1.1</artifactId>
+      <version>1.1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/modbus-core-1.1.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>modbus-master</groupId>
+      <artifactId>tcp-1.1.1</artifactId>
+      <version>1.1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/modbus-master-tcp-1.1.1.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>modbus4j</groupId>
+      <artifactId>modbus4j-2.1.1</artifactId>
+      <version>2.1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/modbus4j-2.1.1.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>serotonin-timer</groupId>
+      <artifactId>timer-2.0.6</artifactId>
+      <version>2.0.</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/serotonin-timer-2.0.6.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>serotonin-utils</groupId>
+      <artifactId>utils-2.1.7</artifactId>
+      <version>1.1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/serotonin-utils-2.1.7.jar</systemPath>
+    </dependency>
+
+
+    <dependency>
+      <groupId>onbon.bx05</groupId>
+      <artifactId>bx05-0.5.0-SNAPSHOT</artifactId>
+      <version>0.5.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/bx05-0.5.0-SNAPSHOT.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>onbon.bx05</groupId>
+      <artifactId>bx05-0.5.0-SNAPSHOT-javadoc</artifactId>
+      <version>0.5.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/bx05-0.5.0-SNAPSHOT-javadoc.jar</systemPath>
+    </dependency>
+
+    <!--  <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.15</version>
+      </dependency>-->
+
+    <!-- <dependency>
+       <groupId>org.apache.mina</groupId>
+       <artifactId>mina-core</artifactId>
+       <version>2.1.3</version>
+     </dependency>
+
+     &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.mina/mina-integration-beans &ndash;&gt;
+     <dependency>
+       <groupId>org.apache.mina</groupId>
+       <artifactId>mina-integration-beans</artifactId>
+       <version>2.1.3</version>
+     </dependency>
+ -->
+
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jacob</groupId>
+      <artifactId>jacob</artifactId>
+      <version>1.10</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/jacob.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>simple-xml-2.7.1</groupId>
+      <artifactId>simple</artifactId>
+      <version>2.7.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/simple-xml-2.7.1.jar</systemPath>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>2.3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15on</artifactId>
+      <version>1.59</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.6</version>
+    </dependency>
+    <dependency>
+      <groupId>live.autu</groupId>
+      <artifactId>jfinal-swagger</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+    <dependency>
+      <groupId>org.mybatis.generator</groupId>
+      <artifactId>mybatis-generator-core</artifactId>
+      <version>1.3.6</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/mybatis-generator-core-1.3.6.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <optional>true</optional> <!-- 表示依赖不会传递 -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>2.3.14</version>
+    </dependency>
+
+
+
+
+    <dependency>
+      <groupId>jamod</groupId>
+      <artifactId>jamod-1.2</artifactId>
+      <version>1.2</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/jamod-1.2.jar</systemPath>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.microsoft/sqljdbc4 -->
+    <dependency>
+      <groupId>com.microsoft</groupId>
+      <artifactId>sqljdbc4</artifactId>
+      <version>3.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/jar/sqljdbc4-3.0.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13-beta-3</version>
+      <scope>test</scope>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.digitalpetri.modbus</groupId>
+      <artifactId>modbus-master-tcp</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+
+  </dependencies>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>ias-snapshots</id>
+      <name>Infinite Automation Snapshot Repository</name>
+      <url>https://maven.mangoautomation.net/repository/ias-snapshot/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>ias-releases</id>
+      <name>Infinite Automation Release Repository</name>
+      <url>https://maven.mangoautomation.net/repository/ias-release/</url>
+    </repository>
+  </repositories>
+
+
+  <build>
+    <!-- <pluginManagement>&lt;!&ndash; lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) &ndash;&gt;
+       <plugins>
+         &lt;!&ndash; clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle &ndash;&gt;
+         <plugin>
+           <artifactId>maven-clean-plugin</artifactId>
+           <version>3.1.0</version>
+         </plugin>
+         &lt;!&ndash; default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging &ndash;&gt;
+         <plugin>
+           <artifactId>maven-resources-plugin</artifactId>
+           <version>3.0.2</version>
+         </plugin>
+         <plugin>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.8.0</version>
+         </plugin>
+         <plugin>
+           <artifactId>maven-surefire-plugin</artifactId>
+           <version>2.22.1</version>
+         </plugin>
+         <plugin>
+           <artifactId>maven-jar-plugin</artifactId>
+           <version>3.0.2</version>
+         </plugin>
+         <plugin>
+           <artifactId>maven-install-plugin</artifactId>
+           <version>2.5.2</version>
+         </plugin>
+         <plugin>
+           <artifactId>maven-deploy-plugin</artifactId>
+           <version>2.8.2</version>
+         </plugin>
+         &lt;!&ndash; site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle &ndash;&gt;
+         <plugin>
+           <artifactId>maven-site-plugin</artifactId>
+           <version>3.7.1</version>
+         </plugin>
+         <plugin>
+           <artifactId>maven-project-info-reports-plugin</artifactId>
+           <version>3.0.0</version>
+         </plugin>
+
+         <plugin>
+           <groupId>org.mybatis.generator</groupId>
+           <artifactId>mybatis-generator-maven-plugin</artifactId>
+           <version>1.3.6</version>
+           <configuration>
+             &lt;!&ndash;项目中mybatis-generator.xml配置文件的位置，一定要保证正确&ndash;&gt;
+             <configurationFile>src/main/resources/mybatis-generator.xml</configurationFile>
+             <verbose>true</verbose>
+             <overwrite>true</overwrite>
+           </configuration>
+           <executions>
+             <execution>
+               <id>mybatis generator</id>
+               <phase>package</phase>
+               <goals>
+                 <goal>generate</goal>
+               </goals>
+             </execution>
+           </executions>
+
+
+           <dependencies>
+               <dependency>
+               <groupId>mysql</groupId>
+               <artifactId>mysql-connector-java</artifactId>
+               <version>5.1.30</version>
+             </dependency>
+
+
+
+           </dependencies>
+
+
+
+
+         </plugin>
+         &lt;!&ndash;热部署更新&ndash;&gt;
+         <plugin>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-maven-plugin</artifactId>
+          &lt;!&ndash; <configuration>
+             <fork>true</fork> &lt;!&ndash; 如果没有该配置，devtools不会生效 &ndash;&gt;
+             <mainClass>com.suta.App</mainClass>
+           </configuration>&ndash;&gt;
+ &lt;!&ndash;          <executions>
+             <execution>
+               <goals>
+                 <goal>repackage</goal>
+               </goals>
+             </execution>
+           </executions>&ndash;&gt;
+         </plugin>
+
+
+
+         <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-jar-plugin</artifactId>
+           <configuration>
+             <archive>
+               <manifest>
+                 <addClasspath>true</addClasspath>
+                 <classpathPrefix>lib/</classpathPrefix>
+                 <mainClass>com.suta.App</mainClass>
+                 <useUniqueVersions>false</useUniqueVersions>
+               </manifest>
+             </archive>
+           </configuration>
+         </plugin>
+
+
+
+       </plugins>
+     </pluginManagement>-->
+    <!--
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>1.8</source>
+              <target>1.8</target>
+            </configuration>
+          </plugin>
+          &lt;!&ndash;<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>2.0</version>
+            <configuration>
+              <transformers>
+                <transformer implementation = "org.apache.maven.plugins.shade.resource.MainifestResourceTransformer">
+                  <mainClass>com.suta.App</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>shade</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>&ndash;&gt;
+        </plugins>
+    -->
+
+
+    <finalName>tra</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.ch.App</mainClass>
+          <includeSystemScope>true</includeSystemScope>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!--添加配置跳过测试-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skipTests>true</skipTests>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+      <!--添加配置跳过测试-->
+    </plugins>
+
+
+
+
+    <resources>
+      <!-- mybaties:当使用xml方式时，需要配置  又称 资源拷贝插件-->
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.*</include>
+        </includes>
+      </resource>
+    </resources>
+
+  </build>
+</project>

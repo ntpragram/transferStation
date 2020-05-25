@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ch.dao.master.ReplaceContainerMapper">
+  <resultMap id="BaseResultMap" type="com.ch.dataobject.master.ReplaceContainer">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="berthId" jdbcType="INTEGER" property="berthid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="isSuccess" jdbcType="INTEGER" property="issuccess" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, berthId, createTime, isSuccess
+  </sql>
+  <select id="getUpdateContainerRecord" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from replace_container where 1=1
+    <if test= "startTime !=null and startTime !=''">
+      and createTime &gt;= #{startTime}
+    </if>
+    <if test="endTime !=null and endTime!=''">
+      and createTime &lt;= #{endTime}
+    </if>
+     order by id desc limit #{page},10
+  </select>
+
+    <select id="getExportContainerRecord" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from replace_container where 1=1
+        <if test= "startTime !=null and startTime !=''">
+            and createTime &gt;= #{startTime}
+        </if>
+        <if test="endTime !=null and endTime!=''">
+            and createTime &lt;= #{endTime}
+        </if>
+        order by createTime desc
+    </select>
+
+  <select id="getContainerRecord"   resultType="java.lang.Integer">
+    select
+   count(*)
+    from replace_container where 1=1
+
+    <if test= "startTime !=null and startTime !=''">
+      and createTime &gt;= #{startTime}
+    </if>
+    <if test="endTime !=null and endTime!=''">
+      and createTime &lt;= #{endTime}
+    </if>
+
+  </select>
+
+  <delete id="deleteContainerRecord" parameterType="java.lang.Integer">
+    delete from replace_container
+    where id = #{param1}
+  </delete>
+
+
+
+
+
+</mapper>
